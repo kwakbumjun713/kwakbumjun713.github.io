@@ -1,11 +1,11 @@
 ---
 title: "Hello, World"
-date: 2026-04-19 12:00:00 +0900
+date: 2026-04-19 00:00:00 +0900
 categories: [misc]
 tags: [meta]
 ---
 
-블로그 첫 포스트. 앞으로 여기에 CTF writeup, 취약점 분석, 삽질기를 기록한다.
+# Test Page
 
 ## 코드 블록 테스트
 
