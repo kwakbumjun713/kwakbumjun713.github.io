@@ -1,3 +1,9 @@
+---
+title : "Finding Gadgets Like It's 2026: Auto-Trigger Deserialization Gadget Chain on JDK 17/21/25 and Spring Boot 3.2.x-4.0.5(KOR)"
+date : 2026-04-19 10:00:00 +0900
+categories: [Research]
+tags: [Java, Spring, Gadget, Unserialize]
+---
 # Victims Code
 
 해당 체인은 타겟 서버에 아래와 같은 역직렬화 로직이 있다고 가정한다.
