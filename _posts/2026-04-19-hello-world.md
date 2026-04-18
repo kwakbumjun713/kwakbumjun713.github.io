@@ -1,7 +1,7 @@
 ---
 title: "Hello, World"
 date: 2026-04-19 00:00:00 +0900
-categories: [misc]
+categories: [web]
 tags: [meta]
 ---
 
