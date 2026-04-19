@@ -69,7 +69,7 @@ DISALLOWED_LOGIN_MODULES_DEFAULT =
 
 패치 코드를 분석해보니 위와 같이 JndiLoginModule 이름만 비교해서 막고 있다 → 다른 LoginModule을 쓰면 우회가 가능하지 않을까?
 
-<LoginModule의 조건>
+## LoginModule의 조건
 
 아무 LoginModule이나 쓸 수 있는게 아니고 조건이 있다.
 
@@ -81,7 +81,7 @@ DISALLOWED_LOGIN_MODULES_DEFAULT =
 - RCE, Arbitary File Write, Arbitary File Read, etc
 </aside>
 
-<위의 조건이 생긴 이유>
+### 위의 조건이 생긴 이유
 
 조건 1. LoginModule 인터페이스 구현체여야함
 
@@ -147,8 +147,9 @@ options에서 moduleName을 읽어서 그 클래스를 동적으로 로드하고
 
 LdapLoginModule은 LDAP 서버로 사용자 인증을 해주는 모듈이다. 
 
-```java
-<동작 원리>
+동작 원리는 아래와 같다.
+
+```text
 1. CallbackHandler에서 username, password 가져옴
 2. password가 비어있지 않으면
 3. JNDI lookup 실행 <- 여기서 RCE 트리거
@@ -235,8 +236,8 @@ sasl.callback.handler.class =
 2. FileBasedDynamicPlainLoginCallbackHandler가 파일에서 username, password 읽어옴 → pw 비어있지 않음
 3. LdapLoginModule이 JNDI lookup 실행 → 공격자 LDAP 서버에 접속 → RCE 달성
 
-![image.png](image.png)
+![LdapLoginModule exploit flow](image.png)
 
 따라서 PoC는 위와 같이 구성할 수 있다.
 
-![image.png](image1.png)
+![PoC configuration flow](image%201.png)
