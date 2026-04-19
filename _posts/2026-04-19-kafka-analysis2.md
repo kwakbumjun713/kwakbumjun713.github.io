@@ -1,5 +1,5 @@
 ---
-title : "Kafka 1-day Analysis Part1"
+title : "Kafka 1-day Analysis Part2"
 date : 2026-04-19 10:00:00 +0900
 categories: [Research]
 tags: [Java, Kafka, 1day]
