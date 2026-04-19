@@ -19,7 +19,9 @@ https://github.com/azraelxuemo/Presentations/blob/main/DEFCON%2033/Client%20or%2
 
 # TL;DR
 
-Defcon-33 발표 주제 중 "Client or Server? The Hidden Sword of Damocles in Kafka"라는 발표를 듣고 이에 대한 분석을 진행하였다.
+kafka 인프라에 대한 공격
+
+→ 특정 사용자에 대한 공격이 아님
 
 # What is Kafka?
 
