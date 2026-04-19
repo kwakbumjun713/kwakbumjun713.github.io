@@ -3,11 +3,12 @@ title : "Kafka 1-day analysis"
 date : 2026-04-19 10:00:00 +0900
 categories: [Research]
 tags: [Java, Kafka, 1day]
+media_subpath: /assets/img/posts/kafka-analysis
 ---
 <aside>
 💡
 
-<Reference>
+**Reference**
 
 https://infocondb.org/con/def-con/def-con-33/client-or-server-the-hidden-sword-of-damocles-in-kafka
 
@@ -193,9 +194,9 @@ ksqlDB → 쿼리 실행 시 설정 변경 가능
 
 </aside>
 
-<발표자료>
+### 발표자료
 
-![image.png](attachment:23e42e91-6049-417d-819e-09ccd468cfd2:image.png)
+![Kafka cluster and partitions](cluster-and-partitions.png)
 
 위의 발표 자료를 보면 한 가지 다른 것이 있다. 위에서는 Kafka cluster, Partition에 대해서 이야기 하지 않았지만 해당 그림에는 클러슽터와 파티션이 나와 있다. → What is it?
 
@@ -254,7 +255,7 @@ Kafka Cluster
 
 # CVE-2023-25194
 
-![image.png](attachment:d6e2b8c6-e8ea-4c60-ae45-08302ea7e79c:image.png)
+![Kafka clients ecosystem](kafka-clients-ecosystem.png)
 
 일단 이 사진부터 이해를 해보자. 해당 사진은 Kafka clients 라이브러리를 사용하는 것들이다.
 
@@ -378,7 +379,7 @@ KafkaConsumer 생성
 
 → RCE
 
-![발표자료의 attack flow](attachment:517a460f-3088-483b-907c-f9a4624472ee:image.png)
+![발표자료의 attack flow](jndi-attack-flow.png)
 
 발표자료의 attack flow
 
@@ -526,7 +527,7 @@ JNDILoginModule.login                ← 여기서 JNDI lookup 발생!
 
 ### 그렇다면 LoginContext.login 내부에서는 어떻게 동작할까?
 
-![image.png](attachment:5d8f048c-b4fb-46d3-9526-a68963605764:image.png)
+![LoginContext login flow](logincontext-flow.png)
 
 JVM 안에서 LoginContext가 JndiLoginModule을 어떻게 호출하는지 봐야한다.
 
@@ -552,7 +553,7 @@ Kafka (별도 라이브러리)
 
 </aside>
 
-<Flow>
+### Flow
 
 1. connection string
 
@@ -624,7 +625,7 @@ ObjectInputStream.readObject → 역직렬화
 = 신뢰할 수 없는 주소로 lookup하면 RCE 발생
 ```
 
-![image.png](attachment:265d5eb6-6c3b-4748-915c-a8ea1de56b3e:image.png)
+![InitialContext lookup flow](initialcontext-lookup-flow.png)
 
 Evil server set up → JNDI url injection
 
