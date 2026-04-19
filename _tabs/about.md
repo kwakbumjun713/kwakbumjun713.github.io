@@ -5,10 +5,9 @@ order: 4
 ---
 
 ## whoami
-test
 
+My name is Bumjun Kwak, and I am interested in web exploitation and red teaming, with broader curiosity across multiple security domains.
 
-
-## 연락처
+## Contact
 
 - Email: bumjum713@gmail.com
