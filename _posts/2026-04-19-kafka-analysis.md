@@ -19,10 +19,7 @@ https://github.com/azraelxuemo/Presentations/blob/main/DEFCON%2033/Client%20or%2
 </aside>
 
 # TL;DR
-
-kafka 인프라에 대한 공격
-
-→ 특정 사용자에 대한 공격이 아님
+Defcon-33 발표 중 흥미로운 주제가 있어서 해당 발표에 대해 분석해봄
 
 # What is Kafka?
 
