@@ -1,4 +1,9 @@
-# RCE via gadget chain in Kafka
+---
+title : "RCE via Gadget Chain in Kafka"
+date : 2026-04-21 08:47:00 +0900
+categories: [Research]
+tags: [Java, Kafka, Deserialization, RCE]
+---
 
 상태: Study reference
 
