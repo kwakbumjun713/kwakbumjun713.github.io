@@ -6,7 +6,7 @@ order: 4
 
 ## whoami
 
-My name is Bumjun Kwak, and I am interested in web exploitation and red teaming, with broader curiosity across multiple security domains.
+My name is Bumjun Kwak, and I am interested in web exploitation and penetration testing, with broader curiosity across multiple security domains.
 
 ## Contact
 
