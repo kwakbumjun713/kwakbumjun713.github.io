@@ -4,9 +4,6 @@ date : 2026-04-21 08:47:00 +0900
 categories: [Research]
 tags: [Java, Kafka, Deserialization, RCE]
 ---
-
-상태: Study reference
-
 # TL;DR
 
 현재 rewrite lab에서 “Finding vulnerable gadget chains in OpenJDK” 라는 주제로 연구를 진행하고 있다. 해당 연구 진행 중 개인적으로 spring에서 작동하는 rce 가젯 체인을 발견했다. 따라서 이를 활용하여 Java 기반 라이브러리 혹은 프레임워크에서 RCE를 찾아보고자 한다.
