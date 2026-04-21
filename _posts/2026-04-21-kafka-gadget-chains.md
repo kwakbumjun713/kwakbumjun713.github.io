@@ -47,24 +47,19 @@ private void load() {
         throw new ConnectException(e);
     }
 }
-
--> SafeObjectInputStream으로 바이트스트림 필터링 중임. 이따가 해당 내용에 대해 다룰 것
 ```
+
+→ SafeObjectInputStream으로 바이트스트림을 필터링 중이다. 이 내용은 아래에서 다시 다룬다.
 
 → 아직 Kafka Broker protocol request path에는 일반적인 ObjectInputStream.readObject() Source가 보이지 않고 있다.
 
 ## 2. 공격자가 Source 입력 바이트 제어 가능
 
-가젯 체인은 공격자의 바이트스트림이 readObject()에 들어가야 한다. Kafka Connect sink 기준 ㄴ입력은 offset.storage.file.filename이다. → Connect standalone offset storage file
+가젯 체인은 공격자의 바이트스트림이 `readObject()`에 들어가야 한다. Kafka Connect sink 기준 입력 지점은 `offset.storage.file.filename`이다.
 
-<aside>
-💡
-
-<조건>
-
-공격자가 이 파일 내용을 쓸 수 있음 또는 worker가 공격자 제어 파일을 읽도록 경로 조작 가능 또는 symbolic link / mount  / shared volume  insecure file permissions 등으로 파일 제어 가능
-
-</aside>
+> **조건**
+> 공격자가 해당 파일 내용을 쓸 수 있거나, worker가 공격자 제어 파일을 읽도록 경로를 조작할 수 있어야 한다.
+> 예를 들면 symbolic link, mount/shared volume, insecure file permissions 같은 조건으로 파일 제어가 가능해야 한다.
 
 ## 3. Source가 외부 보안 경계 안에 있어야 함
 
